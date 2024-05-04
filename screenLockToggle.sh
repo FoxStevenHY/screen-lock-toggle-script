@@ -7,10 +7,8 @@ session_number=$(loginctl list-sessions --no-legend | awk '$5 == "tty1" {print $
 state=$(loginctl show-session $session_number -p LockedHint --no-pager | awk -F= '/LockedHint/ {print $2; exit}')
 if [[ "$state" == "no" ]]; then
   echo "The session ($session_number) is currently unlocked."
-  lockScreen
 else
   echo "The session ($session_number) is currently locked."
-  unlockScreen
 fi
 
 
