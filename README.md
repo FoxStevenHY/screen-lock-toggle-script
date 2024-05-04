@@ -1,4 +1,4 @@
-# screen-lock-toggle-script
+# Linux screen lock toggle script
 The Screen Lock Toggle Script is a Linux bash script that allows you to toggle screen lock and unlock for the current active session. 
 It helps you to find the running session and use `loginctl` command to perform the lock/unlock actions.
 
